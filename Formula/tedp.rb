@@ -6,26 +6,26 @@
 class Tedp < Formula
   desc "Tedplatform CLI — deploy apps to managed Kubernetes"
   homepage "https://tederga.org"
-  version "0.41.3"
+  version "0.55.43"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/TedergaGO/homebrew-tap/releases/download/v0.41.3/tedp_0.41.3_macOS_arm64.tar.gz"
-      sha256 "efb8b3c8cdcaf77c0fafcdd5b35024171b3888bd74d44527f020bb7f458bd71c"
+      url "https://github.com/grknatabay/tedplatform-mcp/releases/download/v0.55.43/tedp_0.55.43_macOS_arm64.tar.gz"
+      sha256 "a69f1c905dc0362f3c8bbe1c90353bb29787637f414cd3019381d26e46fd414d"
     else
-      url "https://github.com/TedergaGO/homebrew-tap/releases/download/v0.41.3/tedp_0.41.3_macOS_x86_64.tar.gz"
-      sha256 "f6682f533e47ffcf5829860bffdb6a9a39099e1ec5ebe835497e19bc12a74bfe"
+      url "https://github.com/grknatabay/tedplatform-mcp/releases/download/v0.55.43/tedp_0.55.43_macOS_x86_64.tar.gz"
+      sha256 "8b3bb59dda6ab01958e6055596da0d74fef66ed3dd9cad7a2bd6764a67b18b31"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/TedergaGO/homebrew-tap/releases/download/v0.41.3/tedp_0.41.3_Linux_arm64.tar.gz"
-      sha256 "073b808086548a3b57b0fb71f3226f5a2bf9f152b907b23753dafd93d46dc37b"
+      url "https://github.com/grknatabay/tedplatform-mcp/releases/download/v0.55.43/tedp_0.55.43_Linux_arm64.tar.gz"
+      sha256 "e824bd8e6b93c95d91540722960a5a51953fe184c83a56f6ca11ed7acd8ba3cb"
     else
-      url "https://github.com/TedergaGO/homebrew-tap/releases/download/v0.41.3/tedp_0.41.3_Linux_x86_64.tar.gz"
-      sha256 "d33e372c290c1c4f87c5de6d72df5c6ecf05f8479c8d08921ba29cefd35a644d"
+      url "https://github.com/grknatabay/tedplatform-mcp/releases/download/v0.55.43/tedp_0.55.43_Linux_x86_64.tar.gz"
+      sha256 "9addb7bc9e6edf1cb63cf74c9c795ec89766a39bbf16691e6d94d6716bb12fa6"
     end
   end
 
@@ -34,6 +34,6 @@ class Tedp < Formula
   end
 
   test do
-    assert_match "tedp v0.41.3", shell_output("#{bin}/tedp version")
+    assert_match "tedp v0.55.43", shell_output("#{bin}/tedp version")
   end
 end
